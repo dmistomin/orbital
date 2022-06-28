@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Orbital"
+run/main_scene="res://game/Game.tscn"
 config/icon="res://icon.png"
 
 [display]
