@@ -9,13 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Node",
 "class": "Combat",
 "language": "GDScript",
 "path": "res://game/combat/combat.gd"
+}, {
+"base": "Node",
+"class": "Game",
+"language": "GDScript",
+"path": "res://game/game.gd"
+}, {
+"base": "ParallaxBackground",
+"class": "ScrollingBackground",
+"language": "GDScript",
+"path": "res://game/combat/environment/scrolling_background.gd"
 } ]
 _global_script_class_icons={
-"Combat": ""
+"Combat": "",
+"Game": "",
+"ScrollingBackground": ""
 }
 
 [application]

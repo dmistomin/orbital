@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/bg_2048_stars.png" type="Texture" id=1]
+[ext_resource path="res://game/combat/environment/scrolling_background.gd" type="Script" id=2]
+[ext_resource path="res://assets/bg_2048_dust.png" type="Texture" id=3]
+[ext_resource path="res://assets/bg_2048_dust2.png" type="Texture" id=4]
+
+[node name="DefaultBackground" type="ParallaxBackground"]
+script = ExtResource( 2 )
+on = true
+camera_velocity = Vector2( 0, 1000 )
+
+[node name="StarLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="Sprite" type="Sprite" parent="StarLayer"]
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 2048, 2048 )
+
+[node name="FarDustLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="Sprite" type="Sprite" parent="FarDustLayer"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( 0, 0, 2048, 2048 )
+
+[node name="CloseDustLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="Sprite" type="Sprite" parent="CloseDustLayer"]
+self_modulate = Color( 1, 1, 1, 0.196078 )
+texture = ExtResource( 4 )
+centered = false
+region_rect = Rect2( 0, 0, 2048, 2048 )
