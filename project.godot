@@ -9,25 +9,73 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Card",
+"language": "GDScript",
+"path": "res://game/combat/shared/card.gd"
+}, {
+"base": "Resource",
+"class": "CardEffect",
+"language": "GDScript",
+"path": "res://game/combat/shared/card_effect.gd"
+}, {
+"base": "Resource",
+"class": "CardInfo",
+"language": "GDScript",
+"path": "res://game/combat/shared/card_info.gd"
+}, {
+"base": "Reference",
+"class": "CardList",
+"language": "GDScript",
+"path": "res://game/combat/shared/card_list.gd"
+}, {
 "base": "Node",
 "class": "Combat",
 "language": "GDScript",
 "path": "res://game/combat/combat.gd"
+}, {
+"base": "Reference",
+"class": "Enums",
+"language": "GDScript",
+"path": "res://game/enums.gd"
 }, {
 "base": "Node",
 "class": "Game",
 "language": "GDScript",
 "path": "res://game/game.gd"
 }, {
+"base": "Node",
+"class": "Level",
+"language": "GDScript",
+"path": "res://game/combat/level/level.gd"
+}, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://game/combat/player/player.gd"
+}, {
 "base": "ParallaxBackground",
 "class": "ScrollingBackground",
 "language": "GDScript",
-"path": "res://game/combat/environment/scrolling_background.gd"
+"path": "res://game/combat/level/scrolling_background.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Ship",
+"language": "GDScript",
+"path": "res://game/combat/player/ship.gd"
 } ]
 _global_script_class_icons={
+"Card": "",
+"CardEffect": "",
+"CardInfo": "",
+"CardList": "",
 "Combat": "",
+"Enums": "",
 "Game": "",
-"ScrollingBackground": ""
+"Level": "",
+"Player": "",
+"ScrollingBackground": "",
+"Ship": ""
 }
 
 [application]
@@ -43,6 +91,10 @@ window/size/height=1080
 window/dpi/allow_hidpi=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[global]
+
+physics=false
 
 [input]
 
@@ -84,6 +136,7 @@ play_card={
 
 [physics]
 
+common/physics_fps=240
 common/enable_pause_aware_picking=true
 
 [rendering]

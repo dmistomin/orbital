@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://game/combat/shared/card_info.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Sweeping Fire"
+description = "Bullets that start in two straight streams, fan out, then re-converge"
+type = 0
