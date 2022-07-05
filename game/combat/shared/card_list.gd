@@ -21,7 +21,7 @@ func draw(num_to_draw: int) -> Array:
 		if drawn_card != null:
 			cards_to_return.append(drawn_card)
 
-			return cards_to_return
+  return cards_to_return
 
 
 func draw_one() -> Card:

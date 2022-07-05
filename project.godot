@@ -9,6 +9,26 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://game/combat/bullets/bullet.gd"
+}, {
+"base": "Node2D",
+"class": "BulletPattern",
+"language": "GDScript",
+"path": "res://game/combat/bullets/bullet_pattern.gd"
+}, {
+"base": "Sprite",
+"class": "BulletSpawn",
+"language": "GDScript",
+"path": "res://game/combat/bullets/bullet_spawn.gd"
+}, {
+"base": "Node",
+"class": "Bullets",
+"language": "GDScript",
+"path": "res://game/combat/bullets/bullets.gd"
+}, {
 "base": "Reference",
 "class": "Card",
 "language": "GDScript",
@@ -63,8 +83,17 @@ _global_script_classes=[ {
 "class": "Ship",
 "language": "GDScript",
 "path": "res://game/combat/player/ship.gd"
+}, {
+"base": "BulletPattern",
+"class": "StraightLinePattern",
+"language": "GDScript",
+"path": "res://game/combat/bullets/patterns/straight_line_pattern.gd"
 } ]
 _global_script_class_icons={
+"Bullet": "",
+"BulletPattern": "",
+"BulletSpawn": "",
+"Bullets": "",
 "Card": "",
 "CardEffect": "",
 "CardInfo": "",
@@ -75,7 +104,8 @@ _global_script_class_icons={
 "Level": "",
 "Player": "",
 "ScrollingBackground": "",
-"Ship": ""
+"Ship": "",
+"StraightLinePattern": ""
 }
 
 [application]
