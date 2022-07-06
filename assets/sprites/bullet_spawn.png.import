@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_prototype.png-c1f66905dcbf37e362ffb4bd4d95dc35.stex"
+path="res://.import/bullet_spawn.png-b93eaf239d74827bc664b2a2f1ba205e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player_prototype.png"
-dest_files=[ "res://.import/player_prototype.png-c1f66905dcbf37e362ffb4bd4d95dc35.stex" ]
+source_file="res://assets/sprites/bullet_spawn.png"
+dest_files=[ "res://.import/bullet_spawn.png-b93eaf239d74827bc664b2a2f1ba205e.stex" ]
 
 [params]
 

@@ -5,7 +5,7 @@
 [ext_resource path="res://game/combat/level/DefaultBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://game/combat/player/player.gd" type="Script" id=4]
 [ext_resource path="res://game/combat/player/ship.gd" type="Script" id=5]
-[ext_resource path="res://assets/player_prototype.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/player_prototype.png" type="Texture" id=6]
 [ext_resource path="res://game/combat/level/level.gd" type="Script" id=7]
 [ext_resource path="res://game/combat/level/Border.tscn" type="PackedScene" id=8]
 [ext_resource path="res://game/combat/bullets/bullets.gd" type="Script" id=9]
@@ -40,19 +40,14 @@ texture = ExtResource( 6 )
 [node name="Hitbox" type="CollisionShape2D" parent="Combat/Player/Ship"]
 shape = SubResource( 1 )
 
-[node name="ActiveAttacks" type="Node2D" parent="Combat/Player/Ship"]
+[node name="BulletPatterns" type="Node2D" parent="Combat/Player/Ship"]
+
+[node name="StraightLinePattern" parent="Combat/Player/Ship/BulletPatterns" instance=ExtResource( 10 )]
+visible = false
+interval_between_bullets = 0.075
 
 [node name="Bullets" type="Node" parent="Combat"]
 script = ExtResource( 9 )
-
-[node name="Patterns" type="Node2D" parent="Combat/Bullets"]
-position = Vector2( 960, 500 )
-
-[node name="StraightLinePattern" parent="Combat/Bullets/Patterns" instance=ExtResource( 10 )]
-visible = false
-interval_between_bullets = 0.1
-
-[node name="ActiveBullets" type="Node2D" parent="Combat/Bullets"]
 
 [node name="Level" type="Node" parent="Combat"]
 script = ExtResource( 7 )

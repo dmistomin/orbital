@@ -9,4 +9,4 @@ script = ExtResource( 2 )
 [node name="BulletSpawn" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -63 )
 bullet_damage = 1
-bullet_speed = 500
+bullet_speed = 1000

@@ -8,5 +8,7 @@ onready var player_ship = $Player/Ship
 
 
 func start():
-	bullets.setup()
 	level.spawn_player_ship(player_ship)
+
+	for pattern in player_ship.get_node("BulletPatterns").get_children():
+		pattern.bullets = bullets

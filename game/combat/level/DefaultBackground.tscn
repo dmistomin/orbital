@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/bg_2048_stars.png" type="Texture" id=1]
+[ext_resource path="res://assets/backgrounds/bg_2048_stars.png" type="Texture" id=1]
 [ext_resource path="res://game/combat/level/scrolling_background.gd" type="Script" id=2]
-[ext_resource path="res://assets/bg_2048_dust.png" type="Texture" id=3]
-[ext_resource path="res://assets/bg_2048_dust2.png" type="Texture" id=4]
+[ext_resource path="res://assets/backgrounds/bg_2048_dust.png" type="Texture" id=3]
+[ext_resource path="res://assets/backgrounds/bg_2048_dust2.png" type="Texture" id=4]
 
 [node name="DefaultBackground" type="ParallaxBackground"]
 script = ExtResource( 2 )
