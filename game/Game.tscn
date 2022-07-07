@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/combat/combat.gd" type="Script" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://game/combat/level/Border.tscn" type="PackedScene" id=8]
 [ext_resource path="res://game/combat/bullets/bullets.gd" type="Script" id=9]
 [ext_resource path="res://game/combat/bullets/patterns/StraightLinePattern.tscn" type="PackedScene" id=10]
+[ext_resource path="res://game/inventory/inventory.gd" type="Script" id=11]
+[ext_resource path="res://game/combat/hud/hud.gd" type="Script" id=15]
+[ext_resource path="res://game/combat/hud/player_hand.gd" type="Script" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,10 +26,7 @@ script = ExtResource( 2 )
 
 [node name="Player" type="Node" parent="Combat"]
 script = ExtResource( 4 )
-
-[node name="Hand" type="Node" parent="Combat/Player"]
-
-[node name="Deck" type="Node" parent="Combat/Player"]
+hand_size = 5
 
 [node name="Ship" type="KinematicBody2D" parent="Combat/Player"]
 visible = false
@@ -74,8 +74,31 @@ position = Vector2( 1472, 1080 )
 rotation = 1.5708
 
 [node name="HUD" type="Node" parent="Combat"]
+script = ExtResource( 15 )
+
+[node name="LeftPanel" type="Panel" parent="Combat/HUD"]
+anchor_bottom = 1.0
+margin_right = 500.0
+
+[node name="PlayerHand" type="VBoxContainer" parent="Combat/HUD/LeftPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -180.0
+custom_constants/separation = 30
+alignment = 1
+script = ExtResource( 16 )
+
+[node name="RightPanel" type="Panel" parent="Combat/HUD"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -540.0
+margin_bottom = 540.0
 
 [node name="Inventory" type="Node" parent="."]
+script = ExtResource( 11 )
 
 [node name="MainMenu" type="Node" parent="."]
 

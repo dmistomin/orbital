@@ -21,7 +21,7 @@ func draw(num_to_draw: int) -> Array:
 		if drawn_card != null:
 			cards_to_return.append(drawn_card)
 
-  return cards_to_return
+	return cards_to_return
 
 
 func draw_one() -> Card:
@@ -34,7 +34,7 @@ func add_one_card(card: Card):
 
 func add_several_cards(cards_to_add: Array):
 	for c in cards_to_add:
-		add(c)
+		add_one_card(c)
 
 
 func clear():

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/combat/hud/card_tile.gd" type="Script" id=1]
+[ext_resource path="res://assets/cards/dark_background.png" type="Texture" id=2]
+[ext_resource path="res://assets/cards/rounded_frame.png" type="Texture" id=3]
+[ext_resource path="res://assets/cards/reload.png" type="Texture" id=4]
+
+[node name="ReloadTile" type="Control"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource( 1 )
+is_reload_card = true
+
+[node name="DarkBackground" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="LightBackground" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Icon" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Frame" type="TextureRect" parent="."]
+self_modulate = Color( 0.380392, 0.364706, 0.364706, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6

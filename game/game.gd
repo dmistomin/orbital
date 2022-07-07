@@ -3,4 +3,7 @@ extends Node
 
 
 func _ready() -> void:
-	$Combat.start()
+	$Inventory.setup()
+	$Combat.setup()
+
+	$Combat.start($Inventory.deck)
