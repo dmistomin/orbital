@@ -22,4 +22,4 @@ func fire(firing_actor) -> void:
 
 func stop() -> void:
 	is_firing = false
-	firing_entity = Enums.Actor.Environment
+	firing_entity = Enums.Actor.ENVIRONMENT

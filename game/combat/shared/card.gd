@@ -10,13 +10,13 @@ export(int) var value
 
 var data
 var effect
+var linked_tile
 
 
-func _init(o, val, dat, e):
+func _init(o, val, dat):
 	owner = o
 	value = val
 	data = dat
-	effect = e
 
 	card_name = data.name
 	description = data.description

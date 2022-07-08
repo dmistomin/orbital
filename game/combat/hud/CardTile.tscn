@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game/combat/hud/card_tile.gd" type="Script" id=1]
 [ext_resource path="res://assets/cards/dark_background.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/cards/value_box.png" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/Inter-SemiBold.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/fonts/Inter-Medium.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/cards/light_background.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=3]
 size = 12
@@ -20,6 +21,12 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
 [sub_resource type="DynamicFont" id=2]
 size = 52
 use_mipmaps = true
@@ -29,7 +36,7 @@ font_data = ExtResource( 7 )
 [node name="CardTile" type="Control"]
 margin_right = 64.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 64, 64 )
+rect_min_size = Vector2( 192, 192 )
 mouse_filter = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -53,7 +60,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
 
@@ -119,6 +126,22 @@ text = "X"
 fit_content_height = true
 
 [node name="BigValueLabel" type="RichTextLabel" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -63.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 34, 34 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]X[/center]"
+text = "X"
+fit_content_height = true
+
+[node name="HugeValueLabel" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 1.0
 anchor_right = 1.0

@@ -7,15 +7,15 @@ var deck
 
 func setup():
 	var placeholder_deck = [
-		Card.new(Enums.Actor.PLAYER, 1, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 2, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 3, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 4, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 5, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 6, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 7, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 8, CardInfoP1, CardEffect.new()),
-		Card.new(Enums.Actor.PLAYER, 9, CardInfoP1, CardEffect.new()),
+		Card.new(Enums.Actor.PLAYER, 1, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 2, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 3, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 4, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 5, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 6, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 7, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 8, CardInfoP1),
+		Card.new(Enums.Actor.PLAYER, 9, CardInfoP1),
 	]
 
 	deck = CardList.new()

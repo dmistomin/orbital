@@ -8,6 +8,10 @@ func count():
 	return _cards.size()
 
 
+func as_array():
+	return _cards.duplicate()
+
+
 func shuffle():
 	_cards.shuffle()
 
