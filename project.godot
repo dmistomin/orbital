@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game/combat/shared/card.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "CardEffect",
 "language": "GDScript",
 "path": "res://game/combat/shared/card_effect.gd"
@@ -99,11 +99,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game/combat/hud/player_hand.gd"
 }, {
-"base": "BulletPattern",
-"class": "QuadBurstPattern",
-"language": "GDScript",
-"path": "res://game/combat/bullets/patterns/quad_burst_pattern.gd"
-}, {
 "base": "ParallaxBackground",
 "class": "ScrollingBackground",
 "language": "GDScript",
@@ -138,7 +133,6 @@ _global_script_class_icons={
 "Level": "",
 "Player": "",
 "PlayerHand": "",
-"QuadBurstPattern": "",
 "ScrollingBackground": "",
 "Ship": "",
 "StraightLinePattern": ""
