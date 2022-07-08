@@ -5,7 +5,7 @@
 
 [node name="StraightLinePattern" type="Position2D"]
 script = ExtResource( 2 )
-interval_between_bullets = 0.075
+interval_between_bullets = 0.03
 
 [node name="BulletSpawn" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -63 )

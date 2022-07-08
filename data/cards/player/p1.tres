@@ -7,4 +7,4 @@ script = ExtResource( 1 )
 name = "Autocannon"
 description = "Single stream of bullets that lasts a long time"
 type = 0
-play_interval = 5.0
+play_interval = 2.5

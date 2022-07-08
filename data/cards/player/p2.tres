@@ -7,4 +7,4 @@ script = ExtResource( 1 )
 name = "Quad Burst"
 description = "Four streams of bullets, shorter duration than the autocannon"
 type = 0
-play_interval = 0.5
+play_interval = 1.0
