@@ -3,7 +3,7 @@
 [ext_resource path="res://game/combat/bullets/patterns/quad_burst_pattern.gd" type="Script" id=1]
 [ext_resource path="res://game/combat/bullets/BulletSpawn.tscn" type="PackedScene" id=2]
 
-[node name="QuadBurst" type="Position2D"]
+[node name="QuadBurstPattern" type="Position2D"]
 script = ExtResource( 1 )
 interval_between_bullets = 0.04
 

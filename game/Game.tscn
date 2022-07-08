@@ -16,7 +16,7 @@
 [ext_resource path="res://assets/fonts/Inter-SemiBold.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://game/combat/hud/hud.gd" type="Script" id=15]
 [ext_resource path="res://game/combat/hud/player_hand.gd" type="Script" id=16]
-[ext_resource path="res://game/combat/bullets/patterns/QuadBurst.tscn" type="PackedScene" id=17]
+[ext_resource path="res://game/combat/bullets/patterns/QuadBurstPattern.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -58,7 +58,6 @@ shape = SubResource( 1 )
 
 [node name="StraightLinePattern" parent="Combat/Player/Ship/BulletPatterns" instance=ExtResource( 10 )]
 visible = false
-interval_between_bullets = 0.075
 
 [node name="QuadBurstPattern" parent="Combat/Player/Ship/BulletPatterns" instance=ExtResource( 17 )]
 visible = false
