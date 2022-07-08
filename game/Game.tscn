@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/combat/combat.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/fonts/Inter-SemiBold.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://game/combat/hud/hud.gd" type="Script" id=15]
 [ext_resource path="res://game/combat/hud/player_hand.gd" type="Script" id=16]
+[ext_resource path="res://game/combat/bullets/patterns/QuadBurst.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -58,6 +59,9 @@ shape = SubResource( 1 )
 [node name="StraightLinePattern" parent="Combat/Player/Ship/BulletPatterns" instance=ExtResource( 10 )]
 visible = false
 interval_between_bullets = 0.075
+
+[node name="QuadBurstPattern" parent="Combat/Player/Ship/BulletPatterns" instance=ExtResource( 17 )]
+visible = false
 
 [node name="Bullets" type="Node" parent="Combat"]
 script = ExtResource( 9 )
