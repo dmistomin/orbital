@@ -6,6 +6,7 @@ onready var hud = $HUD
 onready var level = $Level
 onready var player = $Player
 onready var player_ship = $Player/Ship
+onready var enemies = $Enemies
 
 
 func _link_card_effects(deck) -> void:
@@ -29,3 +30,4 @@ func start(deck) -> void:
 	deck.shuffle()
 	player.start_game(deck)
 	player.reload_hand()
+	enemies.start_game()

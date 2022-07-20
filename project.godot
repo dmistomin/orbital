@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game/combat/shared/card.gd"
 }, {
-"base": "Resource",
+"base": "Reference",
 "class": "CardEffect",
 "language": "GDScript",
 "path": "res://game/combat/shared/card_effect.gd"
@@ -63,6 +63,21 @@ _global_script_classes=[ {
 "class": "Combat",
 "language": "GDScript",
 "path": "res://game/combat/combat.gd"
+}, {
+"base": "Node",
+"class": "Enemies",
+"language": "GDScript",
+"path": "res://game/combat/enemies/enemies.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://game/combat/enemies/enemy.gd"
+}, {
+"base": "Node2D",
+"class": "EnemySpawn",
+"language": "GDScript",
+"path": "res://game/combat/enemies/enemy_spawn.gd"
 }, {
 "base": "Reference",
 "class": "Enums",
@@ -99,6 +114,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game/combat/hud/player_hand.gd"
 }, {
+"base": "BulletPattern",
+"class": "QuadBurstPattern",
+"language": "GDScript",
+"path": "res://game/combat/bullets/patterns/quad_burst_pattern.gd"
+}, {
 "base": "ParallaxBackground",
 "class": "ScrollingBackground",
 "language": "GDScript",
@@ -113,6 +133,16 @@ _global_script_classes=[ {
 "class": "StraightLinePattern",
 "language": "GDScript",
 "path": "res://game/combat/bullets/patterns/straight_line_pattern.gd"
+}, {
+"base": "Enemy",
+"class": "Turret",
+"language": "GDScript",
+"path": "res://game/combat/enemies/enemy_types/turret.gd"
+}, {
+"base": "Node2D",
+"class": "Wave",
+"language": "GDScript",
+"path": "res://game/combat/enemies/wave.gd"
 } ]
 _global_script_class_icons={
 "ActiveCardsDisplay": "",
@@ -126,6 +156,9 @@ _global_script_class_icons={
 "CardList": "",
 "CardTile": "",
 "Combat": "",
+"Enemies": "",
+"Enemy": "",
+"EnemySpawn": "",
 "Enums": "",
 "Game": "",
 "HUD": "",
@@ -133,9 +166,12 @@ _global_script_class_icons={
 "Level": "",
 "Player": "",
 "PlayerHand": "",
+"QuadBurstPattern": "",
 "ScrollingBackground": "",
 "Ship": "",
-"StraightLinePattern": ""
+"StraightLinePattern": "",
+"Turret": "",
+"Wave": ""
 }
 
 [application]

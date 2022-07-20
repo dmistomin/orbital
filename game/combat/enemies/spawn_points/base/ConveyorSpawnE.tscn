@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/hex_arrow_e.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/hollow_hex.png" type="Texture" id=2]
+[ext_resource path="res://game/combat/enemies/enemy_spawn.gd" type="Script" id=3]
+
+[node name="ConveyorSpawnE" type="Node2D"]
+script = ExtResource( 3 )
+spawn_type = 2
+
+[node name="EditorIcon" type="Node2D" parent="."]
+
+[node name="Frame" type="Sprite" parent="EditorIcon"]
+texture = ExtResource( 2 )
+
+[node name="Icon" type="Sprite" parent="EditorIcon"]
+texture = ExtResource( 1 )

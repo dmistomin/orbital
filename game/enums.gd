@@ -9,3 +9,11 @@ enum CardType {
 	SUMMON,
 	UTILITY,
 }
+
+enum EnemySpawnType {
+	STATIC,
+	CONVEYOR_NORTH,
+	CONVEYOR_EAST,
+	CONVEYOR_SOUTH,
+	CONVEYOR_WEST,
+}

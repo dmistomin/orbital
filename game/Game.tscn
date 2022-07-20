@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/combat/combat.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://game/combat/hud/hud.gd" type="Script" id=15]
 [ext_resource path="res://game/combat/hud/player_hand.gd" type="Script" id=16]
 [ext_resource path="res://game/combat/bullets/patterns/QuadBurstPattern.tscn" type="PackedScene" id=17]
+[ext_resource path="res://game/combat/enemies/enemies.gd" type="Script" id=18]
+[ext_resource path="res://game/combat/enemies/waves/Turret_2Col_Vertical_Conveyor.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,6 +39,12 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Enemies" type="Node" parent="Combat"]
+script = ExtResource( 18 )
+
+[node name="Waves" type="Node" parent="Combat/Enemies"]
+
+[node name="Turret_2Col_Vertical_Conveyor" parent="Combat/Enemies/Waves" instance=ExtResource( 20 )]
+visible = false
 
 [node name="Player" type="Node" parent="Combat"]
 script = ExtResource( 4 )
