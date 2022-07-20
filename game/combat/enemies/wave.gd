@@ -11,7 +11,17 @@ var _time := 0.0
 
 
 func _process(delta: float) -> void:
-	if is_active and not all_spawned:
+	if not is_active:
+		return
+
+	if all_spawned and not has_been_cleared:
+		for spawn_point in _spawn_points:
+			if (not spawn_point.enemy_destroyed) and (not spawn_point.enemy_off_screen):
+				return
+
+		has_been_cleared = true
+
+	if not all_spawned:
 		_time += delta
 
 		for spawn_point_idx in range(_spawn_points.size()):
