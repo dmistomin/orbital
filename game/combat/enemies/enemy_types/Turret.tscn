@@ -19,6 +19,7 @@ self_modulate = Color( 0.54902, 0.027451, 0.160784, 1 )
 texture = ExtResource( 1 )
 
 [node name="Barrel" type="Node2D" parent="."]
+rotation = 1.5708
 
 [node name="BarrelSprite" type="Sprite" parent="Barrel"]
 self_modulate = Color( 0.729412, 0.0196078, 0.0352941, 1 )
@@ -27,6 +28,10 @@ texture = ExtResource( 2 )
 
 [node name="BulletSpawn" parent="Barrel" instance=ExtResource( 6 )]
 position = Vector2( 0, -53 )
+bullet_damage = 5
+bullet_speed = 500
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]

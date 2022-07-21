@@ -31,6 +31,7 @@ func reload_hand() -> void:
 
 	if deck.count() == 0:
 		deck.add_several_cards(discard.as_array())
+		discard = CardList.new()
 		deck.shuffle()
 
 	hand = deck.draw(hand_size)

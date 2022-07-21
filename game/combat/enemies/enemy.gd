@@ -12,7 +12,3 @@ onready var waves = $Waves
 
 func setup() -> void:
 	health = max_health
-
-
-func fire(_fire_time_in_seconds: float) -> void:
-	printerr("fire() method not implemented!")

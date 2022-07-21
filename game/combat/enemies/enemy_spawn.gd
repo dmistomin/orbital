@@ -61,6 +61,6 @@ func _physics_process(delta: float) -> void:
 
 func spawn() -> void:
 	enemy = enemy_to_spawn.instance()
-	enemy.setup()
 	add_child(enemy)
+	enemy.setup()
 	has_spawned = true
