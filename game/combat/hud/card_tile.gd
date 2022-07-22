@@ -3,12 +3,21 @@ extends Control
 
 export(String) var current_size = "small"
 export(bool) var is_reload_card
+export(bool) var is_resolving_effect
+
 export(Vector2) var huge_size = Vector2(256, 256)
 export(Vector2) var large_size = Vector2(192, 192)
 export(Vector2) var mid_size = Vector2(128, 128)
 export(Vector2) var small_size = Vector2(64, 64)
 
 var linked_card
+var _time
+
+
+func _process(delta):
+	if is_resolving_effect:
+		_time += delta
+		_update_radial_frame()
 
 
 func _resize_value_num_if_exists():
@@ -19,6 +28,16 @@ func _resize_value_num_if_exists():
 		$SmallValueLabel.visible = current_size == "small"
 
 
+func _update_radial_frame():
+	$RadialFrame.value = _time
+
+	if _time >= $RadialFrame.max_value:
+		_time = 0.0
+		$RadialFrame.value = 0.0
+		$RadialFrame.visible = false
+		is_resolving_effect = false
+
+
 func setup(card = null):
 	linked_card = card
 
@@ -26,6 +45,20 @@ func setup(card = null):
 		card.linked_tile = self
 
 	draw()
+
+
+func play():
+	is_resolving_effect = true
+	_time = 0.0
+
+	$RadialFrame.visible = true
+	$RadialFrame.tint_under = Color.gray
+	if linked_card.owner == Enums.Actor.PLAYER:
+		$RadialFrame.tint_progress = Color.aqua
+	else:
+		$RadialFrame.tint_progress = Color.red
+	$RadialFrame.step = 0.001
+	$RadialFrame.max_value = linked_card.play_interval
 
 
 func draw():
@@ -58,7 +91,7 @@ func set_tile_size(size: String):
 
 func toggle_border_highlight(on: bool) -> void:
 	if on:
-		$Frame.self_modulate = Color.aqua
+		$Frame.self_modulate = Color.white
 		return
 
 	$Frame.self_modulate = Color.darkgray

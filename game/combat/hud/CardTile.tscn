@@ -92,6 +92,18 @@ texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
 
+[node name="RadialFrame" type="TextureProgress" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+tint_under = Color( 0.254902, 0.254902, 0.254902, 1 )
+tint_progress = Color( 1, 0.960784, 0, 1 )
+nine_patch_stretch = true
+
 [node name="SmallValueLabel" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 1.0

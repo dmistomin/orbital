@@ -30,6 +30,7 @@ func display_player_action(tile) -> void:
 	player_tile.set_tile_size("medium")
 	player_tile.toggle_border_highlight(false)
 	player_tile.modulate.a = 1.0
+	player_tile.play()
 
 	tile.queue_free()
 
@@ -54,6 +55,7 @@ func display_enemy_card(card) -> void:
 	enemy_tile.set_tile_size("medium")
 	enemy_tile.toggle_border_highlight(false)
 	enemy_tile.modulate.a = 1.0
+	enemy_tile.play()
 
 	if player_tile.linked_card:
 		if player_tile.linked_card.value < enemy_tile.linked_card.value:
