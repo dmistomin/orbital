@@ -28,6 +28,9 @@ func start(deck) -> void:
 
 	level.spawn_player_ship(player_ship)
 	deck.shuffle()
+
 	player.start_game(deck)
 	player.reload_hand()
+
 	enemies.start_game()
+	enemies.connect("on_card_played", hud.active_cards_display, "display_enemy_card")

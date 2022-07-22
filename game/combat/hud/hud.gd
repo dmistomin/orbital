@@ -12,6 +12,8 @@ func setup(p) -> void:
 	player = p
 
 	active_cards_display.connect("on_player_action_free", player_hand, "enable")
+	active_cards_display.setup()
+
 	player.connect("on_hand_reloaded", self, "reload_hand")
 	player_hand.connect("on_reload_requested", player, "reload_hand")
 	player_hand.connect("on_tile_played", active_cards_display, "display_player_action")
