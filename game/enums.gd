@@ -17,3 +17,5 @@ enum EnemySpawnType {
 	CONVEYOR_SOUTH,
 	CONVEYOR_WEST,
 }
+
+enum LockOnType { NONE, CLOSEST_ABOVE_CENTER }

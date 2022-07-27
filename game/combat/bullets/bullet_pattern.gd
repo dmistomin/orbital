@@ -7,6 +7,18 @@ var bullets
 var firing_entity
 
 
+func _process(_delta: float):
+	if bullets != null:
+		var player = bullets.get_parent().get_node("Player")
+		var target = player.lock_on_target
+
+		if target == null or (not is_instance_valid(target)):
+			rotation_degrees = 0
+		else:
+			look_at(target.global_position)
+			rotation_degrees += 90
+
+
 func setup(bullet_manager):
 	bullets = bullet_manager
 

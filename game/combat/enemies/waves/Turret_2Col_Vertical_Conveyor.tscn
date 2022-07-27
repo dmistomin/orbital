@@ -10,79 +10,79 @@ offset = Vector2( 0, -1080 )
 [node name="RS_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 0 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 150 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 300 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 450 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 600 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 750 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 900 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="RS_8" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1200, 1050 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 0 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 150 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 300 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 450 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 600 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 750 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 900 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0
 
 [node name="LS_8" parent="." instance=ExtResource( 4 )]
 position = Vector2( 700, 1050 )
 delay = 1.0
-conveyor_speed = 400.0
+conveyor_speed = 200.0

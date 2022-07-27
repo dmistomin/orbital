@@ -10,7 +10,8 @@ func _process(_delta: float):
 
 
 func _look_at_player():
-	look_at(_player_ship.global_position)
+	$Barrel.look_at(_player_ship.global_position)
+	$Barrel.rotation_degrees += 90
 
 
 func setup() -> void:

@@ -12,3 +12,7 @@ onready var waves = $Waves
 
 func setup() -> void:
 	health = max_health
+
+
+func toggle_lock_on(enabled: bool):
+	$DiagonalLockOn.visible = enabled

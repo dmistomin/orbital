@@ -89,6 +89,7 @@ visible = false
 [node name="Player" type="Node" parent="Combat"]
 script = ExtResource( 4 )
 hand_size = 5
+lock_on_setting = 1
 
 [node name="Ship" type="KinematicBody2D" parent="Combat/Player" groups=["player_ship"]]
 visible = false
